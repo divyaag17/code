@@ -32,7 +32,7 @@ def helper1(w1, w2, i):
         w1.set()  # used for waking the second thread
 
 
-
+# creating threads
 thread1 = Thread(target=helper1, args=(work_1, work_2, 0))
 thread2 = Thread(target=helper2, args=(work_1, work_2, 1))
 
