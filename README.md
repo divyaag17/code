@@ -13,7 +13,7 @@ def helper2(w1, w2, i):
     while time.time() < t_end:
         #time.sleep(1)
         w2.set()  # waking the first thread
-        w1.wait()  # waiting for the first thread to get over
+        w1.wait()  # waiting for the first thread to get executed
        
         w1.clear()  # clearing the flag
         print(i)
@@ -23,7 +23,7 @@ def helper2(w1, w2, i):
 def helper1(w1, w2, i):
     #for i in range(1, 11, 2):
     while time.time() < t_end:
-        w2.wait()  # waiting for the second thread to get over
+        w2.wait()  # waiting for the second thread to get executed
         w2.clear()  # clearing the flag
         
         print(i)
